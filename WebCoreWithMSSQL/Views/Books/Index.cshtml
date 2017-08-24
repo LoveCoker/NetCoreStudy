@@ -1,0 +1,101 @@
+@model IEnumerable<WebCoreWithMSSQL.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PublisherId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PublishDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Isbn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WordsCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContentDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AurhorDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EditorComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Toc)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublisherId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublishDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WordsCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AurhorDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EditorComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Toc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

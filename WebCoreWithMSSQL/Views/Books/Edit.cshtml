@@ -1,0 +1,113 @@
+@model WebCoreWithMSSQL.Models.Book
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Book</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="CategoryId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Author" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PublisherId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PublisherId" class="form-control" />
+                <span asp-validation-for="PublisherId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PublishDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PublishDate" class="form-control" />
+                <span asp-validation-for="PublishDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Isbn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Isbn" class="form-control" />
+                <span asp-validation-for="Isbn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="WordsCount" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="WordsCount" class="form-control" />
+                <span asp-validation-for="WordsCount" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="UnitPrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="UnitPrice" class="form-control" />
+                <span asp-validation-for="UnitPrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ContentDescription" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ContentDescription" class="form-control" />
+                <span asp-validation-for="ContentDescription" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="AurhorDescription" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="AurhorDescription" class="form-control" />
+                <span asp-validation-for="AurhorDescription" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EditorComment" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EditorComment" class="form-control" />
+                <span asp-validation-for="EditorComment" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Toc" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Toc" class="form-control" />
+                <span asp-validation-for="Toc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

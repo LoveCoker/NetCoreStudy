@@ -1,0 +1,90 @@
+@model WebCoreWithMSSQL.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublisherId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublisherId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Isbn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Isbn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WordsCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WordsCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContentDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AurhorDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AurhorDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EditorComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EditorComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Toc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Toc)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
