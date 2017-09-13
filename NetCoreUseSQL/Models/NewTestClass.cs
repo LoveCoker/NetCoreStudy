@@ -9,7 +9,9 @@ namespace NetCoreUseSQL.Models
     {
         public void Test()
         {
-            Console.WriteLine("这是一个测试方法");
+            string s = "这是一个测试方法";
+            Console.WriteLine(s);
+
         }
     }
 }
